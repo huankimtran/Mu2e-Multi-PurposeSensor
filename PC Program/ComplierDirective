@@ -1,0 +1,2 @@
+g++ ./Maincode/Maincode.cpp ./COMM/COMM.cpp ./COMM/Library/RS-232/rs232.c -o maincode.out -std=c++0x -w
+

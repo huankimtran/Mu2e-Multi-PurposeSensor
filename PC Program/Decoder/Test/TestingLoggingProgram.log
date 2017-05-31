@@ -1,0 +1,37 @@
+Test1:
+#Firmware: Arduino Program/MainCode/MainCode3/MainCode3.ino
+#Log:
+	+This is the original program used to decode data that does not have humid data
+#Raw Data structure:
+	+First byte: value represents the number of acceleration data set. One data set of the accleration data includes 10 bytes: first 4 bytes is timestamp, 2 bytes x axis data,2 bytes y axis data,2 bytes z axis data.
+	+Next N*10 bytes is the data of the N  acceleration data set
+#Decoded Data structure:
+	+
+Test2:05/11/2017
+#Firmware: Arduino Program/MainCode/MainCode3/MainCode3.ino
+#Upgrade:
+	+ program to read the data containing humid data
+#Log:
+	+The program work fine. However the data shows that there is a enormous delay in acceleration reading.
+	Every time the Arduino jump into reading AM2302, it takes the Arduino roughly 1100ms to go out of the function.
+	+Forcing Arduino not to use AM2302 function shows that the delay is due to writing the SDCard, not because of reading 		the AM2302
+	+During testing with fake data of 0 to prevent Arduino from jumping into function read AM2302, the humidity value
+	decoded by computer shows 36.53C. This is normal because if the raw data has value zero, the temperature decoding 
+	formula will output 36.53. So don't be supprised!
+	+it turns out that I used function to decode temperature value provided by the acceleration sensor to decode the 
+	AM2302 data, which results in wrong measurement. 
+Test3:
+#Firmware: Arduino Program/MainCode/MainCode3/MainCode3.ino
+#Upgrade:
+	+ Output file in CSV format
+	+ decode the data into 2 different files; One contains the temperature and the humidity data (the humidity data actually has not been included in the arduino firmware yet but will be included in the next version of the firmware) and one contains purely the timestamp and accelerations data
+#Decoded Data structure:
+	+All data files are format under CSV format. Each field (column) will be sperated by comma
+	+Data structure in acceleration decoded data *.acc:
+	Timestamp,Acceleration X axis,Acceleration Y axis,Acceleration Z axis
+	+Data structure in temperature and humidity data *.tmp:
+	Timestamp,Temperature
+Test4:
+#Firmware: Arduino Program/MainCode/MainCode3/MainCode3.ino
+-Upgrade:
+	+Included the clump index in the acceleration data file

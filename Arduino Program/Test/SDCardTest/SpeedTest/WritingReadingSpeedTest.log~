@@ -1,0 +1,15 @@
+//-------------------Reading-Test---------------------------
+ReadingSpeed1.ino
+BUFF	Speed(byte/s)
+10	132061
+100	230300
+200	240300
+500	246516 
+
+ReadingSpeed2.ino (graphing reading speed arcording to buff read)
+data saved in ReadingSpeedvsBufferSizeGraph.xls
+
+Conclusion reading buff around 50 resulting in reading speed of 200kbs is
+good enough
+//------------------Writing-Test--------------------------------
+Conclusion, full speed writing should be used with buffer with size of 50

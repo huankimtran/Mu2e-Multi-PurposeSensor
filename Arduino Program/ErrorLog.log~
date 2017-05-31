@@ -1,0 +1,21 @@
+-Arduino does not go into setup
+ +Ram overflowed? Reduce BUFF_SIZE to under 30 resolved the problem 
+ +Pin 13 was overused. Pin 13 was already used by SPI but then was accidentally assigned as mode indicator
+-Pc program always stuck when Arduino transfers second file
+
+-The received data does not match with the real data on the SDCard
+
+-Arduino file counter overflow when it reaches 255
+
+/**************************Tesing*log*****************************
+05/02/2017
+-Testing increase the baudrate of Serial to 115200 and 460800 with SoftwareSerial. The connection was broken at 1000000 ( haven't tested the gap between 460800 and 1000000)
+-The reading speed above 115200 seems not depends on the baudrate but the SDcard reading speed.
+TODO-LIST
+-Write a Serial speedometer program for linux and arduino
+-Write a SDCard reading speedometer program for arduino
+-Try to use buffer in reading of SDcard
+-Try to use buffer in transferring data to PC
+-Testing with HardwareSerial
+-Testing with SDFat library
+

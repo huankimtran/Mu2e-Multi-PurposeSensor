@@ -1,0 +1,10 @@
+#include "Wire.h"
+#include "MPU6050Huan.h"
+MPU6050 chip(false);
+void setup(){
+  Serial.begin(9600);
+}
+void loop(){
+  Serial.println(chip.readTemp());
+  delay(1000);
+}

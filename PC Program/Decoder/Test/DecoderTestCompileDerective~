@@ -1,0 +1,2 @@
+g++ ~/Desktop/Working/Decoder/Test/Decoder.cpp -o decoder.out
+

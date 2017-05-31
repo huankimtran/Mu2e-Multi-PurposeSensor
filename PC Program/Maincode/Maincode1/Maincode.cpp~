@@ -1,0 +1,8 @@
+#include <iostream>
+#include "COMM.h"
+#include "Decoder.h"
+const string MENU="3 - Set working directory\n2 - Pull out data to working directory\n1 - Decode the data\n0 - Quit";
+int main(int argn,char* arg[]){
+	cout<<"Welcome to Mu2e-TempHud program:"<<endl;
+	cout<<MENU<<endl;	
+}

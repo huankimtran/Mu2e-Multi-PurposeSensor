@@ -1,0 +1,6 @@
+Maincode 4
+-Update setup and loop function to make arduino have two mode: Reading mode and Sensing mode
+-Does not include temperature data in the Writesetofdata function due to fail to writing reading from the AM2302
+Maincode 5 - 1:35AM 05/11/2017
+
+

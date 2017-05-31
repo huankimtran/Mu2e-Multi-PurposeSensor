@@ -1,0 +1,13 @@
+/*
+	Mu2e-box-sensor.h - the project's sensor library
+	Created by Huan Tran, April 2, 2017
+*/
+#ifndef Mu2e-box-sensor_h
+#define Mu2e-box-sensor_h
+
+#include "Arduino.h"
+
+void initialize();
+void runJob();
+ 
+#endif

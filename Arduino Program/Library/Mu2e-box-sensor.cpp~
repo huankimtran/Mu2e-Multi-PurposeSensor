@@ -1,0 +1,9 @@
+#include "Arduino.h"
+#include "Mu2e-box-sensor.h"
+
+void initialize(){
+}
+
+void runJob(){
+}
+
